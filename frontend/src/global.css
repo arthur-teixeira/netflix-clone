@@ -1,0 +1,21 @@
+:root {
+  font-family: 'Circular Std', 'Martel Sans', sans-serif;
+  --red: #e50914;
+  --gray: #222
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  outline: none;
+  color: #fff;
+  border: none;
+}
+
+body {
+  background-color: #000;
+  min-width: 340px;
+}
