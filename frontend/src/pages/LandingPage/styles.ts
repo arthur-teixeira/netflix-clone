@@ -7,10 +7,11 @@ export const BgImage = styled.div`
   background: url(${background}) no-repeat;
   position: absolute;
   top: 0;
-  right: 0;
+  left: 0;
   z-index: -1;
   display: block;
   width: 100%;
+  min-width: 340px;
   filter: brightness(0.5);
   ${({ theme }) => css`
     @media (max-width: ${theme.breakpoints.medium}) {
