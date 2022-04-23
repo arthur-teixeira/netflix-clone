@@ -10,9 +10,11 @@ export const Wrapper = styled.div`
   height: 80%;
   ${({ theme }) => css`
     @media (max-width: ${theme.breakpoints.medium}) {
+      margin-top: 5rem;
       height: 70%;
     }
     @media (max-width: ${theme.breakpoints.small}) {
+      margin-top: 3rem;
       height: 30%;
     }
   `}
@@ -74,11 +76,9 @@ export const InputWrapper = styled.div`
   align-items: center;
   justify-content: center;
   margin: 0 auto;
-  width: 750px;
   ${({ theme }) => css`
     @media (max-width: ${theme.breakpoints.medium}) {
-      flex-direction: column;
-      max-width: 500px;
+      display: block;
     }
     @media (max-width: ${theme.breakpoints.small}) {
     }
@@ -87,26 +87,36 @@ export const InputWrapper = styled.div`
 
 export const Input = styled.input`
   border: 1px solid #cecece;
-  padding: 1.125rem;
-  width: 75%;
+  padding: 25px;
+  width: 500px;
 
   &::placeholder {
     font-size: 1.125rem;
   }
+
+  ${({ theme }) => css`
+  @media (max-width: ${theme.breakpoints.medium}) {
+      padding: 1rem;
+      border-radius: 3px;
+      width: 80%;
+      margin: 0 auto
+      display: block;
+    }
+  `}
 `;
 
 export const Button = styled.button`
   background: var(--red);
-  padding: 10px;
-  width: 25%;
+  padding: 16px;
   font-size: 1.875rem;
   border-radius: 3px;
   ${({ theme }) => css`
     @media (max-width: ${theme.breakpoints.medium}) {
-      margin: 1rem 0;
+      margin: 1rem auto;
       width: auto;
       font-size: 1rem;
       padding: 0.5rem 1rem;
+      display: block;
     }
   `}
 `;
