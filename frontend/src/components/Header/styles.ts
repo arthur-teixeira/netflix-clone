@@ -1,19 +1,20 @@
 import styled, { css } from "styled-components";
 
 export const Wrapper = styled.div`
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  margin: 0 3.5rem;
-  padding-top: 2rem;
-  height: 10vh;
-
   ${({ theme }) => css`
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin: 0 ${theme.margins.lg};
+    padding-top: 2rem;
+    height: 10vh;
     @media (max-width: ${theme.breakpoints.medium}) {
-      margin: 0 2rem;
+      margin: 0 ${theme.margins.md};
+      height: 0;
     }
     @media (max-width: ${theme.breakpoints.small}) {
-      margin: 0 1rem;
+      margin: 0 ${theme.margins.sm};
+      height: 10vh;
     }
   `}
 `;

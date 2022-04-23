@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import background from "../../assets/landing-background.jpg";
 
 export const BgImage = styled.div`
@@ -12,7 +12,14 @@ export const BgImage = styled.div`
   display: block;
   width: 100%;
   filter: brightness(0.5);
-  border-bottom: 5px solid var(--gray);
+  ${({ theme }) => css`
+    @media (max-width: ${theme.breakpoints.medium}) {
+      height: 80vh;
+    }
+    @media (max-width: ${theme.breakpoints.small}) {
+      height: 60vh;
+    }
+  `}
 `;
 
 export const BgGradient = styled.div`
@@ -25,4 +32,14 @@ export const BgGradient = styled.div`
     rgba(0, 0, 0, 0) 60%,
     rgba(0, 0, 0, 0.8) 100%
   );
+  border-bottom: 10px solid var(--gray);
+
+  ${({ theme }) => css`
+    @media (max-width: ${theme.breakpoints.medium}) {
+      height: 80vh;
+    }
+    @media (max-width: ${theme.breakpoints.small}) {
+      height: 60vh;
+    }
+  `}
 `;

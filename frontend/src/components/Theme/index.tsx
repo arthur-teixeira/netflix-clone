@@ -6,6 +6,11 @@ const Theme = ({ children }: any) => {
       medium: "768px",
       small: "480px",
     },
+    margins: {
+      lg: "3.5rem",
+      md: "2rem",
+      sm: "1rem",
+    },
   };
 
   return <ThemeProvider theme={theme}>{children}</ThemeProvider>;
