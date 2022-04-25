@@ -15,7 +15,7 @@ const LandingPage = () => {
         <HeroCard />
       </div>
       {secondaryCards.map((card) => (
-        <SecondaryCard {...card} />
+        <SecondaryCard {...card} key={card.order} />
       ))}
     </>
   );
