@@ -37,7 +37,7 @@ module.exports = (plop) => {
       {
         type: "modify",
         path: "../src/libs/i18next/locales/pt.ts",
-        pattern: /("; \n\n)/,
+        pattern: /(";\n\n)/,
         template:
           '";\nimport i18n{{pascalCase name}}Pt from "components/{{pascalCase name}}/i18n{{pascalCase name}}.pt";\n\n',
       },
@@ -50,7 +50,7 @@ module.exports = (plop) => {
       {
         type: "modify",
         path: "../src/libs/i18next/locales/en.ts",
-        pattern: /("; \n\n)/,
+        pattern: /(";\n\n)/,
         template:
           '";\nimport i18n{{pascalCase name}}En from "components/{{pascalCase name}}/i18n{{pascalCase name}}.en";\n\n',
       },
