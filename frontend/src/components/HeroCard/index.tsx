@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import {
   Button,
   Content,
@@ -10,18 +11,16 @@ import {
 } from "./styles";
 
 const HeroCard = () => {
+  const { t } = useTranslation();
   return (
     <Wrapper>
-      <Title>Filmes, séries e muito mais. Sem limites.</Title>
-      <Subtitle>Assista onde quiser. Cancele quando quiser.</Subtitle>
+      <Title>{t("hero.title")}</Title>
+      <Subtitle>{t("hero.subtitle")}</Subtitle>
       <Content>
-        <Text>
-          Pronto para assistir? Informe seu email para criar ou reiniciar sua
-          assinatura.
-        </Text>
+        <Text>{t("hero.text")}</Text>
         <InputWrapper>
           <Input type='email' placeholder='Email' />
-          <Button>Vamos lá &rsaquo;</Button>
+          <Button>{t("hero.cta")} &rsaquo;</Button>
         </InputWrapper>
       </Content>
     </Wrapper>

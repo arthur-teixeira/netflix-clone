@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import { SecondaryCardProps } from "./SecondaryCard";
 import {
   Content,
@@ -13,15 +14,15 @@ import {
 const SecondaryCard = ({
   leftToRight,
   resource,
-  subtitle,
-  title,
+  order,
 }: SecondaryCardProps) => {
+  const { t } = useTranslation();
   return (
     <Wrapper>
       <Content leftToRight={leftToRight}>
         <Text>
-          <Title>{title}</Title>
-          <Subtitle>{subtitle}</Subtitle>
+          <Title>{t(`${order}.title`)}</Title>
+          <Subtitle>{t(`${order}.subtitle`)}</Subtitle>
         </Text>
         <ImageContainer>
           <Image src={resource} />

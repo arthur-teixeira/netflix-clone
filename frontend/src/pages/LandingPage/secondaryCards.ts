@@ -6,29 +6,22 @@ import { SecondaryCardProps } from "../../components/SecondaryCard/SecondaryCard
 
 export default [
   {
-    title: "Aproveite na TV.",
-    subtitle:
-      "Assista em Smart TVs, PlayStation, Xbox, Chromecast, Apple TV, aparelhos de Blu-ray e outros dispositivos.",
+    order: "first",
     resource: tv,
     leftToRight: true,
   },
   {
-    title: "Baixe séries para assistir offline.",
-    subtitle: "Salve seus títulos favoritos e sempre tenha algo para assistir.",
+    order: "second",
     resource: mobile,
     leftToRight: false,
   },
   {
-    title: "Assista quando quiser.",
-    subtitle:
-      "Assista no celular, tablet, Smart TV ou notebook sem pagar a mais por isso.",
+    order: "third",
     resource: bundle,
     leftToRight: true,
   },
   {
-    title: "Crie perfis para crianças.",
-    subtitle:
-      "Deixe as crianças se aventurarem com seus personagens favoritos em um espaço feito só para elas, sem pagar a mais por isso.",
+    order: "fourth",
     resource: infant,
     leftToRight: false,
   },

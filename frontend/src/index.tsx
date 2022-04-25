@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./global.css";
+import "./libs/i18next/index";
 import App from "./App";
 
 const root = ReactDOM.createRoot(

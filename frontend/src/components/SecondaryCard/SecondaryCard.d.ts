@@ -1,6 +1,5 @@
 export type SecondaryCardProps = {
-  title: string;
-  subtitle: string;
+  order: string;
   resource: string;
   leftToRight: boolean;
 };
