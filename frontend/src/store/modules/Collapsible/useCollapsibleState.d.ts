@@ -11,6 +11,5 @@ export type CollapsibleModule = [number, Dispatch<SetStateAction<number>>];
 
 export type CollapsibleHookReturn = {
   current?: number;
-  collapseCard: () => void;
-  expandCard: (card: number) => void;
+  toggleCard: (card: number) => void;
 };

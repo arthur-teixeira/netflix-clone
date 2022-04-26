@@ -5,17 +5,16 @@ export function useCollapsibleState(): CollapsibleHookReturn {
   const { collapsibleModule } = useGlobalState();
   const [collapsible, setCollapsible] = collapsibleModule;
 
-  const expandCard = (card: number) => {
-    setCollapsible(card);
-  };
-
-  const collapseCard = () => {
-    setCollapsible(-1);
+  const toggleCard = (card: number) => {
+    if (collapsible === card) {
+      setCollapsible(-1);
+    } else {
+      setCollapsible(card);
+    }
   };
 
   return {
     current: collapsible,
-    expandCard,
-    collapseCard,
+    toggleCard,
   };
 }

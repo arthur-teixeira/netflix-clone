@@ -16,4 +16,6 @@ i18n.use(initReactI18next).init({
   },
 });
 
+i18n.services.formatter?.add("paragraph", (text) => `<p>${text}</p>`);
+
 export default i18n;

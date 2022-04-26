@@ -26,18 +26,18 @@ module.exports = (plop) => {
       },
       {
         type: "add",
-        path: "../src/components/{{pascalCase name}}/i18n{{pascalCase name}}.pt.ts",
+        path: "../src/components/{{pascalCase name}}/i18n/i18n{{pascalCase name}}.pt.ts",
         templateFile: "template-component/i18n.ts.hbs",
       },
       {
         type: "add",
-        path: "../src/components/{{pascalCase name}}/i18n{{pascalCase name}}.en.ts",
+        path: "../src/components/{{pascalCase name}}/i18n/i18n{{pascalCase name}}.en.ts",
         templateFile: "template-component/i18n.ts.hbs",
       },
       {
         type: "modify",
         path: "../src/libs/i18next/locales/pt.ts",
-        pattern: /(";\n\n)/,
+        pattern: /(";\n\n)/g,
         template:
           '";\nimport i18n{{pascalCase name}}Pt from "components/{{pascalCase name}}/i18n{{pascalCase name}}.pt";\n\n',
       },
@@ -45,12 +45,12 @@ module.exports = (plop) => {
         type: "modify",
         path: "../src/libs/i18next/locales/pt.ts",
         pattern: /(translation: {)/g,
-        template: "$1\n    ...i18n{{pascalCase name}},",
+        template: "$1\n    ...i18n{{pascalCase name}}Pt,",
       },
       {
         type: "modify",
         path: "../src/libs/i18next/locales/en.ts",
-        pattern: /(";\n\n)/,
+        pattern: /(\/\/\n)/g,
         template:
           '";\nimport i18n{{pascalCase name}}En from "components/{{pascalCase name}}/i18n{{pascalCase name}}.en";\n\n',
       },
@@ -58,7 +58,7 @@ module.exports = (plop) => {
         type: "modify",
         path: "../src/libs/i18next/locales/en.ts",
         pattern: /(translation: {)/g,
-        template: "$1\n    ...i18n{{pascalCase name}},",
+        template: "$1\n    ...i18n{{pascalCase name}}En,",
       },
     ],
   });

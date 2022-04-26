@@ -1,3 +1,4 @@
+import CollapsibleCardGroup from "../../components/CollapsibleCardGroup";
 import Header from "../../components/Header";
 import HeroCard from "../../components/HeroCard";
 import SecondaryCard from "../../components/SecondaryCard";
@@ -17,6 +18,7 @@ const LandingPage = () => {
       {secondaryCards.map((card) => (
         <SecondaryCard {...card} key={card.order} />
       ))}
+      <CollapsibleCardGroup />
     </>
   );
 };
