@@ -1,7 +1,8 @@
 :root {
   font-family: 'Circular Std', 'Martel Sans', sans-serif;
   --red: #e50914;
-  --gray: #222
+  --gray: #222;
+  --light-gray: #757575;
 }
 
 * {

@@ -1,4 +1,5 @@
 import CollapsibleCardGroup from "../../components/CollapsibleCardGroup";
+import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import HeroCard from "../../components/HeroCard";
 import SecondaryCard from "../../components/SecondaryCard";
@@ -19,6 +20,7 @@ const LandingPage = () => {
         <SecondaryCard {...card} key={card.order} />
       ))}
       <CollapsibleCardGroup />
+      <Footer />
     </>
   );
 };
