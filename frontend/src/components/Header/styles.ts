@@ -34,23 +34,6 @@ export const Logo = styled.img`
   `}
 `;
 
-export const LanguageSelect = styled.select`
-  background: transparent;
-  padding: 0.5rem;
-  border-radius: 3px;
-  border: 1px solid #fff;
-
-  ${({ theme }) => css`
-    @media (max-width: ${theme.breakpoints.small}) {
-      padding: 0.25rem;
-    }
-  `}
-`;
-
-export const LanguageOption = styled.option`
-  background: rgba(0, 0, 0, 0.4);
-`;
-
 export const SignInButton = styled.button`
   padding: 10px 17px;
   border: none;

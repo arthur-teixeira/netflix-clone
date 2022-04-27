@@ -1,32 +1,16 @@
-import {
-  LanguageOption,
-  LanguageSelect,
-  Logo,
-  SignInButton,
-  SubWrapper,
-  Wrapper,
-} from "./styles";
+import { Logo, SignInButton, SubWrapper, Wrapper } from "./styles";
 import netflixLogo from "../../assets/logo.svg";
 import { useTranslation } from "react-i18next";
+import LanguageSelect from "../LanguageSelect";
 
 const Header = () => {
-  const {
-    t,
-    i18n: { changeLanguage },
-  } = useTranslation();
-
-  const handleChange = (e: any) => {
-    changeLanguage(e.target.value);
-  };
+  const { t } = useTranslation();
 
   return (
     <Wrapper>
       <Logo src={netflixLogo}></Logo>
       <SubWrapper>
-        <LanguageSelect onChange={handleChange}>
-          <LanguageOption value='pt'>{t("select.portuguese")}</LanguageOption>
-          <LanguageOption value='en'>{t("select.english")}</LanguageOption>
-        </LanguageSelect>
+        <LanguageSelect />
         <SignInButton>{t("select.sign")}</SignInButton>
       </SubWrapper>
     </Wrapper>
