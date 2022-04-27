@@ -26,3 +26,8 @@ export const Title = styled.h1`
     }
   `}
 `;
+
+export const EmailInputWrapper = styled.li`
+  margin: 3rem auto;
+  text-align: center;
+`;
